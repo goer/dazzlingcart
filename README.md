@@ -1,2 +1,0 @@
-# dazzlingcart
-Created with CodeSandbox
