@@ -1,27 +1,24 @@
 <template>
   <div>
-    <h2>Cart</h2>
+    <div class="panel">
 
-    <table class="table striped">
-      <tr v-for="(c,i) in this.$cart.cart" :key="i">
-        <td>{{c.product.name}}</td>
-        <td>{{c.qty}} {{c.product.unit}}</td>
-        <td>{{c.product.price}}</td>
-        <td>Rp. {{(c.qty*c.product.price)}}</td>
-      </tr>
-      <tr>
-        <td>
-          <h3>Total:</h3>
-        </td>
-        <td></td>
-        <td></td>
-        <td>
-          <h3>Rp. {{$cart.total}}</h3>
-        </td>
-      </tr>
-    </table>
+      <div class="panel-heading">
+        <h2 class="title">Cart</h2>
+      </div>
 
-    <h3>Delivery</h3>
+      <div class="panel-block" v-for="(c,i) in this.$cart.cart" :key="i">
+        <div>{{c.product.name}}</div>
+        <div>{{c.qty}} {{c.product.unit}}
+        {{c.product.price}}</div>
+        <div>Rp. {{(c.qty*c.product.price)}}</div>
+      </div>
+
+      <div class="panel-block title">
+        <div class="is-start">Total</div>
+        <div class="is-end">Rp. {{$cart.total}}</div>
+      </div>
+    </div>
+    <!-- <h3>Delivery</h3>
     <ul>
       <li>Alamat tujuan</li>
       <li>
@@ -31,6 +28,7 @@
         <button>Pesan</button>
       </li>
     </ul>
+    -->
   </div>
 </template>
 <script>
